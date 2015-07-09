@@ -33,11 +33,10 @@
 
 # Model/Artifact
 
-* id():string
 * name():string
 * description():string
 * strength():int
-* magic():int
+* intelligence():int
 * charisma():int
 
 ***
