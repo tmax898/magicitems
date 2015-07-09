@@ -43,8 +43,8 @@
 
 # Collection/Artifact
 
-* artifacts():array
-* artifact(itemID:int):Artifact
+* items():array
+* item(id:int):Artifact
 * count()
 
 ***

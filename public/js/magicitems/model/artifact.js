@@ -1,8 +1,8 @@
 var MagicItems = MagicItems || {};
+MagicItems.Model = MagicItems.Model || {};
 
 /**
  * Represents a magical Artifact.
- *
  */
 (function () {
     /**
@@ -20,5 +20,7 @@ var MagicItems = MagicItems || {};
         this.strength = strength;
         this.intelligence = intelligence;
         this.charisma = charisma;
+
+        this.id = _.uniqueId('art');
     };
 })();

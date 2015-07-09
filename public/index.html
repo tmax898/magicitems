@@ -23,6 +23,28 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<!-- Bring lodash for it's creamy frosting of helpful functions -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
 <!-- Load the applicaton modules last -->
 <script src="js/magicitems/model/artifact.js"></script>
+<script src="js/magicitems/collection/artifact.js"></script>
+<script>
+    var things = [
+        new MagicItems.Model.Artifact(
+                "The Sword of Eratosthenes",
+                "Deals a killing blow to foes not born on a prime day.",
+                1,
+                0,
+                0
+        ),
+        new MagicItems.Model.Artifact(
+                "Dark Chocolate",
+                "Hand made by the Mordimer family choclateers for thirteen generations.",
+                1,
+                0,
+                0
+        )
+    ];
+    var artifacts = new MagicItems.Collection.Artifact(things);
+</script>
 </body>
