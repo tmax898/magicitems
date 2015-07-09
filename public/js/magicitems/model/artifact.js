@@ -14,7 +14,7 @@ var MagicItems = MagicItems || {};
      * @param charisma The charisma modifier than can be expected while the artifact is in an individuals possession.
      * @constructor
      */
-    MagicItems.Artifact = function(name, description, strength, intelligence, charisma) {
+    MagicItems.Model.Artifact = function(name, description, strength, intelligence, charisma) {
         this.name = name;
         this.description = description;
         this.strength = strength;
