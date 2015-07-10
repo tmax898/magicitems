@@ -17,7 +17,11 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<h1>Hello, world!</h1>
+<body>
+<h1>Magic Items</h1>
+<ol id="magicItemsList">
+
+</ol>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -28,8 +32,10 @@
 <!-- Load the applicaton modules last -->
 <script src="js/magicitems/model/artifact.js"></script>
 <script src="js/magicitems/collection/artifact.js"></script>
+<script src="js/magicitems/view/artifacttile.js"></script>
+<script src="js/magicitems/view/artifactlist.js"></script>
 <script>
-    var things = [
+    var artifacts = new MagicItems.Collection.Artifact([
         new MagicItems.Model.Artifact(
                 "The Sword of Eratosthenes",
                 "Deals a killing blow to foes not born on a prime day.",
@@ -44,7 +50,10 @@
                 0,
                 0
         )
-    ];
-    var artifacts = new MagicItems.Collection.Artifact(things);
+    ]);
+
+    var artifactsView = new MagicItems.View.ArtifactList(document.getElementById("magicItemsList"), artifacts);
+    artifactsView.render();
 </script>
 </body>
+</html>
