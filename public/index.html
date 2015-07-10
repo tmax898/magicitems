@@ -34,25 +34,30 @@
 <script src="js/magicitems/collection/artifact.js"></script>
 <script src="js/magicitems/view/artifacttile.js"></script>
 <script src="js/magicitems/view/artifactlist.js"></script>
+<script src="js/magicitems/radio/broadcaster.js"></script>
 <script>
+    var broadcaster = new MagicItems.Radio.Broadcaster();
     var artifacts = new MagicItems.Collection.Artifact([
         new MagicItems.Model.Artifact(
                 "The Sword of Eratosthenes",
                 "Deals a killing blow to foes not born on a prime day.",
                 1,
                 0,
-                0
+                0,
+                broadcaster
         ),
         new MagicItems.Model.Artifact(
                 "Dark Chocolate",
                 "Hand made by the Mordimer family choclateers for thirteen generations.",
                 1,
                 0,
-                0
+                0,
+                broadcaster
         )
-    ]);
+    ],
+    broadcaster);
 
-    var artifactsView = new MagicItems.View.ArtifactList(document.getElementById("magicItemsList"), artifacts);
+    var artifactsView = new MagicItems.View.ArtifactList(document.getElementById("magicItemsList"), artifacts, broadcaster);
     artifactsView.render();
 </script>
 </body>

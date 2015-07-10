@@ -9,7 +9,7 @@ MagicItems.View = MagicItems.View || {};
      * Draws an Artifact as a tile.
      * @constructor
      */
-    MagicItems.View.ArtifactList = function(el, collection) {
+    MagicItems.View.ArtifactList = function(el, collection, broadcaster) {
         var parentTag = "ol";
         var childTag = "li";
 
@@ -19,7 +19,7 @@ MagicItems.View = MagicItems.View || {};
 
             _.forEach(collection.items(), function(item) {
                 var listItemElement = document.createElement(childTag);
-                var view = new MagicItems.View.ArtifactTile(listItemElement, item);
+                var view = new MagicItems.View.ArtifactTile(listItemElement, item, broadcaster);
                 view.render();
 
                 listElement.appendChild(listItemElement);

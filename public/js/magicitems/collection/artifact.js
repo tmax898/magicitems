@@ -8,9 +8,10 @@ MagicItems.Collection = MagicItems.Collection || {};
     /**
      * Creates a new collection of magical artifacts.
      * @param items The artifacts in the user possession.
+     * @param broadcaster The transmitter of events to listen to.
      * @constructor
      */
-    MagicItems.Collection.Artifact = function(items) {
+    MagicItems.Collection.Artifact = function(items, broadcaster) {
         this.items = function() {
             return items;
         };
