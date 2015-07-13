@@ -12,6 +12,10 @@ MagicItems.Controller = MagicItems.Controller || {};
     MagicItems.Controller.App = function(el) {
         var broadcaster, artifacts, artifactsView;
 
+        /**
+         * Starts the application by creating the necessary models and views and binds to events so that it can
+         * respond to changes in application state.
+         */
         this.start = function() {
             broadcaster = new MagicItems.Radio.Broadcaster();
             artifacts = new MagicItems.Collection.Artifact([
@@ -39,10 +43,17 @@ MagicItems.Controller = MagicItems.Controller || {};
             $(broadcaster).on("save:artifact", _.bind(function(event, data) {this.saveArtifact(data)}, this))
         };
 
+        /**
+         * Renders the applicaton so that people can see it.
+         */
         this.render = function() {
             artifactsView.render();
         };
 
+        /**
+         * Saves a change made in via a view to an the affect artifact so that the change is persisted for later use.
+         * @param data The data that should be set in the artifact.
+         */
         this.saveArtifact = function(data) {
             data.model.setName(data.name);
             data.model.setDescription(data.description);

@@ -26,59 +26,54 @@
 
 ***
 
-# Layout
+# Help libraries
+
+* jQuery
+** DOM manipulation
+** Event Handling
+* lodash
+** Helper functions for collections and views
 
 ***
 
 
 # Model/Artifact
 
-* name():string
-* description():string
-* strength():int
-* intelligence():int
-* charisma():int
-
+* Holds data and definitions of how the data can be manipulated.
+* Provide the essential data for the model in the constructor.
+* Create a unique ID to make it quick to identify.
+* Restrict access to data so that events can be fired when values change.
 ***
 
 # Collection/Artifact
 
-* items():array
-* item(id:int):Artifact
-* count()
+* Container for Artifacts.
+* Provides functions for working with the artifacts as a whole.
 
 ***
 
 # View/ArtifactTile
 
-* new($el, template, model)
-* render()
+* Responsible for rendering an Artifact to the screen.
+* Manages events triggered by interactions with the tile.
 
 ***
 
 # View/ArtifactList
 
-* new($el, template, models)
-* render(type)
-
-***
-
-# View/ArtifactTotal
-* new($el, template, models)
-* render(type)
+* Responsible for rendering a collection of Artifacts to the screen.
 
 ***
 
 # Radio
 
-* trigger(event, data)
+* Responsible for broadcasting messages to all parts of the application.
 
 ***
 
-# View/ArtifactTile
+# Controller/App
 
-* new($el, template, models)
-* render(mode)
+* Responsible for managing interactions between the view and model.
 
 ***
 
@@ -86,3 +81,10 @@
 
 * todomvc.com
 * Single Page Web Applications by Micheal S. Mikowski and Josh C. Powell
+
+## Popular MVC/MVVM Frameworks
+* AngularJS https://angularjs.org/
+* React https://facebook.github.io/react/
+* MarionetteJS http://marionettejs.com/
+* Ember http://emberjs.com/
+* Vue.js http://vuejs.org/

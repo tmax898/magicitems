@@ -40,37 +40,37 @@
 <script src="js/magicitems/radio/broadcaster.js"></script>
 <script src="js/magicitems/controller/app.js"></script>
 <script>
-//    document.addEventListener("DOMContentLoaded", function() {
-//        var broadcaster = new MagicItems.Radio.Broadcaster();
-//        var artifacts = new MagicItems.Collection.Artifact([
-//                    new MagicItems.Model.Artifact(
-//                            "The Sword of Eratosthenes",
-//                            "Deals a killing blow to foes not born on a prime day.",
-//                            1,
-//                            0,
-//                            0,
-//                            broadcaster
-//                    ),
-//                    new MagicItems.Model.Artifact(
-//                            "Dark Chocolate",
-//                            "Hand made by the Mordimer family choclateers for thirteen generations.",
-//                            1,
-//                            0,
-//                            0,
-//                            broadcaster
-//                    )
-//                ],
-//                broadcaster);
-//
-//        var artifactsView = new MagicItems.View.ArtifactList(document.getElementById("magicItemsList"), artifacts, broadcaster);
-//        artifactsView.render();
-//    });
-
     document.addEventListener("DOMContentLoaded", function() {
-        var app = new MagicItems.Controller.App(document.getElementById("magicItemsList"));
-        app.start();
-        app.render();
+        var broadcaster = new MagicItems.Radio.Broadcaster();
+        var artifacts = new MagicItems.Collection.Artifact([
+                    new MagicItems.Model.Artifact(
+                            "The Sword of Eratosthenes",
+                            "Deals a killing blow to foes not born on a prime day.",
+                            1,
+                            0,
+                            0,
+                            broadcaster
+                    ),
+                    new MagicItems.Model.Artifact(
+                            "Dark Chocolate",
+                            "Hand made by the Mordimer family choclateers for thirteen generations.",
+                            1,
+                            0,
+                            0,
+                            broadcaster
+                    )
+                ],
+                broadcaster);
+
+        var artifactsView = new MagicItems.View.ArtifactList(document.getElementById("magicItemsList"), artifacts, broadcaster);
+        artifactsView.render();
     });
+
+//    document.addEventListener("DOMContentLoaded", function() {
+//        var app = new MagicItems.Controller.App(document.getElementById("magicItemsList"));
+//        app.start();
+//        app.render();
+//    });
 </script>
 </body>
 </html>
