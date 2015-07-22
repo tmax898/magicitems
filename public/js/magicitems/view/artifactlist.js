@@ -1,3 +1,4 @@
+/*eslint-env meteor, browser*/
 var MagicItems = MagicItems || {};
 MagicItems.View = MagicItems.View || {};
 

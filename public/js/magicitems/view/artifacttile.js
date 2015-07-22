@@ -1,3 +1,4 @@
+/*eslint-env meteor, browser*/
 var MagicItems = MagicItems || {};
 MagicItems.View = MagicItems.View || {};
 
@@ -16,7 +17,7 @@ MagicItems.View = MagicItems.View || {};
         var locked = false;
 
         var template = _.template("<ul>" +
-            "<li class=\"edit\"><a>edit</a></li>" +
+            "<li class=\"edit\"><a id='edit-link'>edit</a></li>" +
             "<li><strong>Name</strong>: <%- getName() %></li>" +
             "<li><strong>Description</strong>: <%- getDescription() %></li>" +
             "<li><strong>Strength</strong>: <%- getStrength() %></li>" +

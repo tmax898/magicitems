@@ -1,3 +1,4 @@
+/*eslint-env meteor */
 var MagicItems = MagicItems || {};
 MagicItems.Controller = MagicItems.Controller || {};
 
