@@ -12,6 +12,9 @@ MagicItems.Collection = MagicItems.Collection || {};
      * @constructor
      */
     MagicItems.Collection.Artifact = function(items, broadcaster) {
+    	this.add = function (item){
+    		items.push(item);
+    	};
         this.items = function() {
             return items;
         };

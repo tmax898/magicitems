@@ -31,10 +31,13 @@
 <ol id="magicItemsList">
 
 </ol>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
 <!-- jQuery UI (for showing of some widget factory magic) -->
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
@@ -51,10 +54,7 @@
 <script>
     /*globals MagicItems */
 /*eslint-env jquery */
-document.addEventListener("DOMContentLoaded", function() {
-		$("#create-new").click(function(){
-			 $(this).createNewArtifact().createNewArtifact('createDialog');
-		});
+
         var broadcaster = new MagicItems.Radio.Broadcaster();
         var artifacts = new MagicItems.Collection.Artifact([
                     new MagicItems.Model.Artifact(
@@ -78,7 +78,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var artifactsView = new MagicItems.View.ArtifactList(document.getElementById("magicItemsList"), artifacts, broadcaster);
         artifactsView.render();
-    });
+        
+		$("#create-new").click(function(){
+			 $(this).createNewArtifact({artifacts : artifacts, artifactsView : artifactsView}).createNewArtifact('createDialog');
+		});
+
 
 //    document.addEventListener("DOMContentLoaded", function() {
 //        var app = new MagicItems.Controller.App(document.getElementById("magicItemsList"));
